@@ -5,7 +5,7 @@ import io.restassured.response.Response;
 
 /**
  * <summary>
- * Handles bookstore-related API operations such as listing books and reserving books for a user.
+ * Classe responsável por encapsular as operações da API de Livraria.
  * </summary>
  */
 public class BookStoreApi {
@@ -13,9 +13,9 @@ public class BookStoreApi {
 
     /**
      * <summary>
-     * Retrieves the list of all available books.
+     * Lista todos os livros disponíveis na livraria.
      * </summary>
-     * <return>HTTP Response containing the list of books.</return>
+     * <return>Response da requisição HTTP.</return>
      */
     public Response listBooks() {
         // Send GET request to fetch the list of books
@@ -31,12 +31,12 @@ public class BookStoreApi {
 
     /**
      * <summary>
-     * Reserves books for a specific user.
+     * Reserva livros para um usuário específico.
      * </summary>
-     * <param name="userId">The user's ID.</param>
-     * <param name="token">JWT token for authentication.</param>
-     * <param name="isbns">Array of ISBNs to reserve.</param>
-     * <return>HTTP Response after attempting reservation.</return>
+     * <param name="userId">ID do usuário.</param>
+     * <param name="token">Token de autenticação do usuário.</param>
+     * <param name="isbns">Array de ISBNs dos livros a reservar.</param>
+     * <return>Response da requisição HTTP.</return>
      */
     public Response reserveBooks(String userId, String token, String[] isbns) {
         // Build JSON payload for reserving books

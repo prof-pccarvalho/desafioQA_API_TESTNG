@@ -7,57 +7,57 @@ import org.testng.annotations.Test;
 
 /**
  * <summary>
- * Unit tests for AccountApi methods.
+ * Classe de testes para operações de usuário.
  * </summary>
  */
 public class AccountApiUnitTest {
 
     /**
      * <summary>
-     * Tests if createUser returns a non-null Response.
+     * Testa se a criação de usuário retorna uma resposta não nula.
      * </summary>
      */
     @Test
     public void testCreateUserReturnsResponse() {
         AccountApi api = new AccountApi();
-        // Use dummy data for test; in real unit tests, mock the HTTP call
+        // Usar dados fictícios para teste; em testes unitários reais, simular a chamada HTTP
         Response response = api.createUser("testUser", "Senha@123");
-        Assert.assertNotNull(response, "Response should not be null");
+        Assert.assertNotNull(response, "A resposta não deve ser nula");
     }
 
     /**
      * <summary>
-     * Tests if generateToken returns a non-null Response.
+     * Testa a geração de token para usuário válido.
      * </summary>
      */
     @Test
     public void testGenerateTokenReturnsResponse() {
         AccountApi api = new AccountApi();
         Response response = api.generateToken("testUser", "Senha@123");
-        Assert.assertNotNull(response, "Response should not be null");
+        Assert.assertNotNull(response, "A resposta não deve ser nula");
     }
 
     /**
      * <summary>
-     * Tests if authorized returns a non-null Response.
+     * Testa se a autorização retorna uma resposta não nula.
      * </summary>
      */
     @Test
     public void testAuthorizedReturnsResponse() {
         AccountApi api = new AccountApi();
         Response response = api.authorized("dummyToken");
-        Assert.assertNotNull(response, "Response should not be null");
+        Assert.assertNotNull(response, "A resposta não deve ser nula");
     }
 
     /**
      * <summary>
-     * Tests if getUser returns a non-null Response.
+     * Testa se a chamada de usuário retorna uma resposta não nula.
      * </summary>
      */
     @Test
     public void testGetUserReturnsResponse() {
         AccountApi api = new AccountApi();
         Response response = api.getUser("dummyUserId");
-        Assert.assertNotNull(response, "Response should not be null");
+        Assert.assertNotNull(response, "A resposta não deve ser nula");
     }
 }

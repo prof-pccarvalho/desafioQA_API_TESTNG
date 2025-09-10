@@ -5,7 +5,7 @@ import io.restassured.response.Response;
 
 /**
  * <summary>
- * Handles user account-related API operations such as user creation, token generation, authorization, and user retrieval.
+ * Classe responsável por encapsular as operações da API de contas de usuário.
  * </summary>
  */
 public class AccountApi {
@@ -13,11 +13,11 @@ public class AccountApi {
 
     /**
      * <summary>
-     * Creates a new user in the API.
+     * Cria um novo usuário na API.
      * </summary>
-     * <param name="userName">The desired username.</param>
-     * <param name="password">The user's password.</param>
-     * <return>HTTP Response from the API.</return>
+     * <param name="userName">Nome de usuário desejado.</param>
+     * <param name="password">Senha do usuário.</param>
+     * <return>Response da requisição HTTP.</return>
      */
     public Response createUser(String userName, String password) {
         // Prepare the JSON payload for user creation
@@ -37,11 +37,11 @@ public class AccountApi {
 
     /**
      * <summary>
-     * Generates an authentication token for a user.
+     * Gera um token de autenticação para o usuário.
      * </summary>
-     * <param name="userName">The username.</param>
-     * <param name="password">The user's password.</param>
-     * <return>HTTP Response containing the token.</return>
+     * <param name="userName">Nome do usuário.</param>
+     * <param name="password">Senha do usuário.</param>
+     * <return>Response da requisição HTTP.</return>
      */
     public Response generateToken(String userName, String password) {
         // Prepare the JSON payload for token generation
@@ -61,10 +61,10 @@ public class AccountApi {
 
     /**
      * <summary>
-     * Checks if the provided token is authorized.
+     * Verifica se o token informado é autorizado.
      * </summary>
-     * <param name="token">JWT token to be checked.</param>
-     * <return>HTTP Response indicating authorization status.</return>
+     * <param name="token">Token JWT do usuário.</param>
+     * <return>Response da requisição HTTP.</return>
      */
     public Response authorized(String token) {
         // Send POST request with Bearer token to check authorization
@@ -80,10 +80,10 @@ public class AccountApi {
 
     /**
      * <summary>
-     * Retrieves user information by user ID.
+     * Obtém os dados de um usuário pelo seu ID.
      * </summary>
-     * <param name="userId">The user's ID.</param>
-     * <return>HTTP Response containing user details.</return>
+     * <param name="userId">ID do usuário.</param>
+     * <return>Response da requisição HTTP.</return>
      */
     public Response getUser(String userId) {
         // Send GET request to retrieve user information

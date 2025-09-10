@@ -7,26 +7,26 @@ import org.testng.annotations.Test;
 
 /**
  * <summary>
- * Unit tests for BookStoreApi methods.
+ * Classe de testes para operações de livraria.
  * </summary>
  */
 public class BookStoreApiUnitTest {
 
     /**
      * <summary>
-     * Tests if listBooks returns a non-null Response.
+     * Testa a listagem de livros disponíveis.
      * </summary>
      */
     @Test
     public void testListBooksReturnsResponse() {
         BookStoreApi api = new BookStoreApi();
         Response response = api.listBooks();
-        Assert.assertNotNull(response, "Response should not be null");
+        Assert.assertNotNull(response, "A resposta não deve ser nula");
     }
 
     /**
      * <summary>
-     * Tests if reserveBooks returns a non-null Response.
+     * Testa se a listagem retorna uma resposta não nula.
      * </summary>
      */
     @Test
@@ -34,6 +34,6 @@ public class BookStoreApiUnitTest {
         BookStoreApi api = new BookStoreApi();
         String[] isbns = {"1234567890", "0987654321"};
         Response response = api.reserveBooks("dummyUserId", "dummyToken", isbns);
-        Assert.assertNotNull(response, "Response should not be null");
+        Assert.assertNotNull(response, "A resposta não deve ser nula");
     }
 }
